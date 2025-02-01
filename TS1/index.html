@@ -23,23 +23,17 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: flex-start;
-            width: 600px;
+            width: 700px;
             position: relative;
         }
         .resume-content {
-            flex: 1;
             text-align: left;
             padding-right: 20px;
         }
-        .profile-picture {
+        .profile-picture img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background-color: #ddd;
-            background-size: cover;
-            background-position: center;
             position: absolute;
             top: 20px;
             right: 20px;
@@ -58,11 +52,10 @@
         #colorToggle:hover {
             background-color: #0056b3;
         }
-
     </style>
 </head>
 <body>
-    <button id="colorToggle">Change Resume Color</button>
+    <button id="colorToggle">Change Color</button>
     <div class="resume-container">
         <div class="resume-content">
             <header>
@@ -78,11 +71,22 @@
                     <li>HTML, CSS, JavaScript</li>
                     <li>React.js, Node.js</li>
                     <li>Responsive Web Design</li>
+                    <li>Database Management (SQL, NoSQL)</li>
+                    <li>API Development</li>
                 </ul>
                 
                 <h2>Experience</h2>
-                <p>Web Developer at XYZ Company (2022 - Present)</p>
-                <p>Freelance Designer (2020 - 2022)</p>
+                <p><strong>Web Developer at XYZ Company</strong> (2022 - Present)</p>
+                <p>Responsible for developing and maintaining web applications, ensuring high performance and responsiveness.</p>
+                <p><strong>Freelance Designer</strong> (2020 - 2022)</p>
+                <p>Worked with clients worldwide to create engaging UI/UX designs and interactive websites.</p>
+                
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>E-commerce Website:</strong> Developed a fully functional online store with payment integration.</li>
+                    <li><strong>Portfolio Website:</strong> Built a personal portfolio showcasing projects and achievements.</li>
+                    <li><strong>Weather App:</strong> Created a dynamic weather forecast app using external APIs.</li>
+                </ul>
             </section>
         </div>
         <div class="profile-picture">
