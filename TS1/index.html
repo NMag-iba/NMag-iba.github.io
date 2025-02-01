@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .resume-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            width: 600px;
+            position: relative;
+        }
+        .resume-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        #colorToggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        #colorToggle:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="colorToggle">Change Resume Color</button>
+    <div class="resume-container">
+        <div class="resume-content">
+            <header>
+                <h1>John Doe</h1>
+                <p>Web Developer | Designer | Programmer</p>
+            </header>
+            <section>
+                <h2>About Me</h2>
+                <p>Passionate web developer with expertise in front-end and back-end technologies...</p>
+                
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React.js, Node.js</li>
+                    <li>Responsive Web Design</li>
+                </ul>
+                
+                <h2>Experience</h2>
+                <p>Web Developer at XYZ Company (2022 - Present)</p>
+                <p>Freelance Designer (2020 - 2022)</p>
+            </section>
+        </div>
+        <div class="profile-picture">
+            <img src="1x1_pic.jpg" alt="Profile Picture">
+        </div>        
+    </div>
+    <script>
+        document.getElementById("colorToggle").addEventListener("click", function() {
+            const colors = ["#ffcccb", "#d1c4e9", "#c8e6c9", "#fff9c4"];
+            document.querySelector(".resume-container").style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        });
+    </script>
+</body>
+</html>
