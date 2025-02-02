@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #d9d7b6;
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,24 +17,54 @@
             position: relative;
         }
         .resume-container {
-            background-color: white;
-            padding: 20px;
+            background-color: #fdfbd4;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 700px;
             position: relative;
+            overflow: hidden;
         }
-        .resume-content {
-            text-align: left;
-            padding-right: 20px;
+        .header-container {
+            background-color: #420303; /* Pink header */
+            color: #fdfbd4;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 10px 10px 0 0;
+        }
+        .header-text {
+            flex: 1;
+        }
+        .header-text h1,
+        .header-text p {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .profile-picture {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fdfbd4;
+            margin-right: 30px;
         }
         .profile-picture img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .resume-content {
+            padding: 30px;
+            text-align: left;
+            margin-top: 0.50px;
+        }
+        .color-section {
+            background-color: transparent;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
         }
         #colorToggle {
             position: absolute;
@@ -45,59 +73,93 @@
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
+            background-color: #420303; /* Dark Red */
+            color: #fdfbd4; /* Cream Font */
             cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition */
         }
+        
         #colorToggle:hover {
-            background-color: #0056b3;
+            background-color: #2d0202; /* Darker Red on Hover */
         }
+        
     </style>
 </head>
 <body>
     <button id="colorToggle">Change Color</button>
     <div class="resume-container">
+        <div class="header-container">
+            <div class="header-text">
+                <h1>Nhica J. Mag-iba</h1>
+                <p>Web Developer | Programmer</p>
+            </div>
+            <div class="profile-picture">
+                <img src="./assets/1x1_pic.jpg" alt="Profile Picture">
+            </div>
+        </div>
         <div class="resume-content">
-            <header>
-                <h1>John Doe</h1>
-                <p>Web Developer | Designer | Programmer</p>
-            </header>
-            <section>
+            <section class="color-section">
                 <h2>About Me</h2>
-                <p>Passionate web developer with expertise in front-end and back-end technologies...</p>
+                <p>A web developer and programmer with skills in designing, developing,
+                    and optimizing user-friendly websites and applications. Always ready to learn new technologies and 
+                    solve complex problems through coding and innovative solutions.</p>
                 
                 <h2>Skills</h2>
                 <ul>
                     <li>HTML, CSS, JavaScript</li>
-                    <li>React.js, Node.js</li>
-                    <li>Responsive Web Design</li>
+                    <li>C++</li>
+                    <li>Python</li>
                     <li>Database Management (SQL, NoSQL)</li>
-                    <li>API Development</li>
+                    <li>Java</li>
                 </ul>
                 
                 <h2>Experience</h2>
-                <p><strong>Web Developer at XYZ Company</strong> (2022 - Present)</p>
-                <p>Responsible for developing and maintaining web applications, ensuring high performance and responsiveness.</p>
-                <p><strong>Freelance Designer</strong> (2020 - 2022)</p>
-                <p>Worked with clients worldwide to create engaging UI/UX designs and interactive websites.</p>
+                <p><strong>Web Developer at ACCENTURE</strong> (2022 - 2024)</p>
+                <p>Mandaluyong, Metro Manila</p>
+                <p><strong>Front-End Developer at J.P. Morgan</strong> (2020 - 2022)</p>
+                <p>Makati, Metro Manila</p>
                 
-                <h2>Projects</h2>
+                <h2>Educational Background</h2>
                 <ul>
-                    <li><strong>E-commerce Website:</strong> Developed a fully functional online store with payment integration.</li>
-                    <li><strong>Portfolio Website:</strong> Built a personal portfolio showcasing projects and achievements.</li>
-                    <li><strong>Weather App:</strong> Created a dynamic weather forecast app using external APIs.</li>
+                    <li><strong>Higher Education: </strong>FEU Institute of Technology</li>
+                    <li><strong>Secondary Education:</strong> Pasig Catholic College</li>
+                    <li><strong>Primary Education:</strong>La Consolacion College Pasig</li>
                 </ul>
             </section>
-        </div>
-        <div class="profile-picture">
-            <img src="1x1_pic.jpg" alt="Profile Picture">
         </div>        
     </div>
     <script>
         document.getElementById("colorToggle").addEventListener("click", function() {
-            const colors = ["#ffcccb", "#d1c4e9", "#c8e6c9", "#fff9c4"];
-            document.querySelector(".resume-container").style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        });
-    </script>
+            const header = document.querySelector(".header-container");
+            const colorSection = document.querySelector(".color-section");
+            const resumeContainer = document.querySelector(".resume-container");
+            const profilePicture = document.querySelector(".profile-picture"); // Select the profile picture
+        
+            // Get current background color in RGB format
+            const currentHeaderColor = getComputedStyle(header).backgroundColor;
+        
+            // Convert hex to RGB for comparison
+            const creamRGB = "rgb(253, 251, 212)"; // Equivalent to #fdfbd4
+            const darkRedRGB = "rgb(66, 3, 3)"; // Equivalent to #420303
+        
+            if (currentHeaderColor === creamRGB) {
+                // Switch back to original colors
+                header.style.backgroundColor = "#420303";
+                header.style.color = "#fdfbd4";
+                colorSection.style.backgroundColor = "transparent";
+                colorSection.style.color = "black";
+                resumeContainer.style.backgroundColor = "#fdfbd4";
+                profilePicture.style.border = "3px solid #fdfbd4"; // Change border back to cream
+            } else {
+                // Change to new colors
+                header.style.backgroundColor = "#fdfbd4";
+                header.style.color = "black";
+                colorSection.style.backgroundColor = "#420303";
+                colorSection.style.color = "#fdfbd4";
+                resumeContainer.style.backgroundColor = "#420303";
+                profilePicture.style.border = "3px solid #420303"; // Change border to dark red
+            }
+        });           
+    </script>    
 </body>
 </html>
