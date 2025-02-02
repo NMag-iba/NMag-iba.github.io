@@ -1,179 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Resume</title>
     <style>
-        html, body {
-            height: 100%;
-            width: 100%;
-        }
-        
-        body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background-color: #d9d7b6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ensures full viewport height */
-            overflow-x: hidden; /* Prevents horizontal scrolling */
-        }
-        
-        .resume-container {
-            background-color: #fdfbd4;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 90%; /* Makes it responsive */
-            max-width: 700px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header-container {
-            background-color: #420303;
-            color: #fdfbd4;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            border-radius: 10px 10px 0 0;
-        }
-        
-        .header-text {
-            flex: 1;
-        }
-        
-        .header-text h1,
-        .header-text p {
-            margin: 0;
-            padding-left: 20px;
-        }
-        
-        .profile-picture {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid #fdfbd4;
-            margin-right: 30px;
-        }
-        
-        .profile-picture img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .resume-content {
-            padding: 30px;
-            text-align: left;
-            margin-top: 0.5px;
-        }
-        
-        .color-section {
-            background-color: transparent;
-            color: black;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        
-        #colorToggle {
-            position: fixed; /* Keeps button in view */
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #420303;
-            color: #fdfbd4;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        
-        #colorToggle:hover {
-            background-color: #2d0202;
-        }        
+      body {
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          background-color: #d9d7b6;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          flex-direction: column;
+      }
+
+      .resume-container {
+          background-color: #fdfbd4;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 700px;
+          position: relative;
+          overflow: hidden;
+          padding-bottom: 30px;
+      }
+
+      @media (max-height: 600px) {
+          body {
+              justify-content: flex-start;
+              padding-top: 20px;
+              padding-bottom: 50px; /
+          }
+      }
+      .header-container {
+          background-color: #420303;
+          color: #fdfbd4;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border-radius: 10px 10px 0 0;
+      }
+      .header-text {
+          flex: 1;
+      }
+      .header-text h1,
+      .header-text p {
+          margin: 0;
+          padding-left: 20px;
+      }
+      .profile-picture {
+          position: relative;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 3px solid #fdfbd4;
+          margin-right: 30px;
+      }
+      .profile-picture img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      .resume-content {
+          padding: 30px;
+          text-align: left;
+          margin-top: 0.50px;
+      }
+      .color-section {
+          background-color: transparent;
+          color: black;
+          padding: 10px;
+          border-radius: 5px;
+      }
+      #colorToggle {
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          background-color: #420303;
+          color: #fdfbd4;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          z-index: 1000; /
+      }
+
+      @media (max-width: 768px) {
+          #colorToggle {
+              top: 10px;
+              left: 10px;
+              padding: 8px 16px;
+              font-size: 14px;
+          }
+      }
+
+      @media (max-width: 480px) {
+          #colorToggle {
+              top: 5px;
+              left: 5px;
+              padding: 6px 12px;
+              font-size: 12px;
+          }
+      }
+
+
+      #colorToggle:hover {
+          background-color: #2d0202;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <button id="colorToggle">Change Color</button>
     <div class="resume-container">
-        <div class="header-container">
-            <div class="header-text">
-                <h1>Nhica J. Mag-iba</h1>
-                <p>Web Developer | Programmer</p>
-            </div>
-            <div class="profile-picture">
-                <img src="./assets/1x1_pic.jpg" alt="Profile Picture">
-            </div>
+      <div class="header-container">
+        <div class="header-text">
+          <h1>Nhica J. Mag-iba</h1>
+          <p>Web Developer | Programmer</p>
         </div>
-        <div class="resume-content">
-            <section class="color-section">
-                <h2>About Me</h2>
-                <p>A web developer and programmer with skills in designing, developing,
-                    and optimizing user-friendly websites and applications. Always ready to learn new technologies and 
-                    solve complex problems through coding and innovative solutions.</p>
-                
-                <h2>Skills</h2>
-                <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li>Database Management (SQL, NoSQL)</li>
-                    <li>Java</li>
-                </ul>
-                
-                <h2>Experience</h2>
-                <p><strong>Web Developer at ACCENTURE</strong> (2022 - 2024)</p>
-                <p>Mandaluyong, Metro Manila</p>
-                <p><strong>Front-End Developer at J.P. Morgan</strong> (2020 - 2022)</p>
-                <p>Makati, Metro Manila</p>
-                
-                <h2>Educational Background</h2>
-                <ul>
-                    <li><strong>Higher Education: </strong>FEU Institute of Technology</li>
-                    <li><strong>Secondary Education:</strong> Pasig Catholic College</li>
-                    <li><strong>Primary Education:</strong>La Consolacion College Pasig</li>
-                </ul>
-            </section>
-        </div>        
+        <div class="profile-picture">
+          <img src="./assets/1x1_pic.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+      <div class="resume-content">
+        <section class="color-section">
+          <h2>About Me</h2>
+          <p>
+            A web developer and programmer with skills in designing, developing,
+            and optimizing user-friendly websites and applications. Always ready
+            to learn new technologies and solve complex problems through coding
+            and innovative solutions.
+          </p>
+
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Database Management (SQL, NoSQL)</li>
+            <li>Java</li>
+          </ul>
+
+          <h2>Experience</h2>
+          <p><strong>Web Developer at ACCENTURE</strong> (2022 - 2024)</p>
+          <p>Mandaluyong, Metro Manila</p>
+          <p>
+            <strong>Front-End Developer at J.P. Morgan</strong> (2020 - 2022)
+          </p>
+          <p>Makati, Metro Manila</p>
+
+          <h2>Educational Background</h2>
+          <ul>
+            <li>
+              <strong>Higher Education: </strong>FEU Institute of Technology
+            </li>
+            <li>
+              <strong>Secondary Education:</strong> Pasig Catholic College
+            </li>
+            <li>
+              <strong>Primary Education:</strong>La Consolacion College Pasig
+            </li>
+          </ul>
+        </section>
+      </div>
     </div>
     <script>
-        document.getElementById("colorToggle").addEventListener("click", function() {
-            const header = document.querySelector(".header-container");
-            const colorSection = document.querySelector(".color-section");
-            const resumeContainer = document.querySelector(".resume-container");
-            const profilePicture = document.querySelector(".profile-picture"); // Select the profile picture
-        
-            // Get current background color in RGB format
-            const currentHeaderColor = getComputedStyle(header).backgroundColor;
-        
-            // Convert hex to RGB for comparison
-            const creamRGB = "rgb(253, 251, 212)"; // Equivalent to #fdfbd4
-            const darkRedRGB = "rgb(66, 3, 3)"; // Equivalent to #420303
-        
-            if (currentHeaderColor === creamRGB) {
-                // Switch back to original colors
-                header.style.backgroundColor = "#420303";
-                header.style.color = "#fdfbd4";
-                colorSection.style.backgroundColor = "transparent";
-                colorSection.style.color = "black";
-                resumeContainer.style.backgroundColor = "#fdfbd4";
-                profilePicture.style.border = "3px solid #fdfbd4"; // Change border back to cream
-            } else {
-                // Change to new colors
-                header.style.backgroundColor = "#fdfbd4";
-                header.style.color = "black";
-                colorSection.style.backgroundColor = "#420303";
-                colorSection.style.color = "#fdfbd4";
-                resumeContainer.style.backgroundColor = "#420303";
-                profilePicture.style.border = "3px solid #420303"; // Change border to dark red
-            }
-        });           
-    </script>    
-</body>
+      document
+        .getElementById("colorToggle")
+        .addEventListener("click", function () {
+          header = document.querySelector(".header-container");
+          colorSection = document.querySelector(".color-section");
+          resumeContainer = document.querySelector(".resume-container");
+          profilePicture = document.querySelector(".profile-picture");
+
+          currentHeaderColor = getComputedStyle(header).backgroundColor;
+
+          creamRGB = "rgb(253, 251, 212)";
+          darkRedRGB = "rgb(66, 3, 3)";
+
+          if (currentHeaderColor === creamRGB) {
+            header.style.backgroundColor = "#420303";
+            header.style.color = "#fdfbd4";
+            colorSection.style.backgroundColor = "transparent";
+            colorSection.style.color = "black";
+            resumeContainer.style.backgroundColor = "#fdfbd4";
+            profilePicture.style.border = "3px solid #fdfbd4";
+          } else {
+            header.style.backgroundColor = "#fdfbd4";
+            header.style.color = "black";
+            colorSection.style.backgroundColor = "#420303";
+            colorSection.style.color = "#fdfbd4";
+            resumeContainer.style.backgroundColor = "#420303";
+            profilePicture.style.border = "3px solid #420303";
+          }
+        });
+    </script>
+  </body>
 </html>
