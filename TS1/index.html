@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Resume</title>
     <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
         body {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             background-color: #d9d7b6;
@@ -13,19 +18,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            position: relative;
+            min-height: 100vh; /* Ensures full viewport height */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
+        
         .resume-container {
             background-color: #fdfbd4;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 700px;
+            width: 90%; /* Makes it responsive */
+            max-width: 700px;
             position: relative;
             overflow: hidden;
         }
+        
         .header-container {
-            background-color: #420303; /* Pink header */
+            background-color: #420303;
             color: #fdfbd4;
             padding: 20px;
             display: flex;
@@ -33,14 +41,17 @@
             position: relative;
             border-radius: 10px 10px 0 0;
         }
+        
         .header-text {
             flex: 1;
         }
+        
         .header-text h1,
         .header-text p {
             margin: 0;
             padding-left: 20px;
         }
+        
         .profile-picture {
             position: relative;
             width: 120px;
@@ -50,39 +61,42 @@
             border: 3px solid #fdfbd4;
             margin-right: 30px;
         }
+        
         .profile-picture img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+        
         .resume-content {
             padding: 30px;
             text-align: left;
-            margin-top: 0.50px;
+            margin-top: 0.5px;
         }
+        
         .color-section {
             background-color: transparent;
             color: black;
             padding: 10px;
             border-radius: 5px;
         }
+        
         #colorToggle {
-            position: absolute;
+            position: fixed; /* Keeps button in view */
             top: 20px;
             left: 20px;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background-color: #420303; /* Dark Red */
-            color: #fdfbd4; /* Cream Font */
+            background-color: #420303;
+            color: #fdfbd4;
             cursor: pointer;
-            transition: background-color 0.3s ease; /* Smooth transition */
+            transition: background-color 0.3s ease;
         }
         
         #colorToggle:hover {
-            background-color: #2d0202; /* Darker Red on Hover */
-        }
-        
+            background-color: #2d0202;
+        }        
     </style>
 </head>
 <body>
