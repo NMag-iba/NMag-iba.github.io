@@ -18,9 +18,9 @@
             <img src="./assets/poke.png" alt="logo">
         </a>
 
-        <button class="navbar-toggler ml-auto custom-toggler"
-                type="button"
-                data-bs-toggle="collapse"
+        <button class="navbar-toggler ml-auto custom-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
                 data-bs-target="#nav3">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,36 +102,33 @@
         <br>
         <div class="row justify-content-center">
             
-            <!-- First Card -->
-            <div class="col-md-4">
-                <div class="card card-1">
-                    <img src="assets/home/P1.png" class="card-img-top" alt="Item Boxes">
-                    <div class="card-body">
-                        <a href="#" class="card-btn">View</a>
-                    </div>
+            <div class="container">
+                <div class="card__container">
+                   <article class="card__article card-1">
+                       <img src="./assets/home/P1.png" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">Item Boxes</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>
+                   
+                   <article class="card__article card-2">
+                       <img src="./assets/home/P2.png" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">PokéCoins</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>
+                   
+                   <article class="card__article card-3">
+                       <img src="./assets/home/P3.png" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">Daily Bundles</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>            
                 </div>
-            </div>
-
-            <!-- Second Card -->
-            <div class="col-md-4">
-                <div class="card card-2">
-                    <img src="assets/home/P2.png" class="card-img-top" alt="PokéCoins">
-                    <div class="card-body">
-                        <a href="#" class="card-btn">View</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Third Card -->
-            <div class="col-md-4">
-                <div class="card card-3">
-                    <img src="assets/home/P3.png" class="card-img-top" alt="Daily Bundles">
-                    <div class="card-body">
-                        <a href="#" class="card-btn">View</a>
-                    </div>
-                </div>
-            </div>
-
+             </div>
         </div>
 
         <!-- View All Button -->
@@ -161,14 +158,66 @@
 <!--END OF ABOUT US-->
 
 <!--FOOTER-->
-<section id="footer">
-<div class="container">
-    <div class="row justify-content-center">
-    </div>
-</div>
-</section>
-<!--END OF FOOTER-->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <!-- Column 1: Brand Logo with Side Logos -->
+            <div class="col1">
+                <div class="brand-section">
+                    <img src="./assets/home/techood.png" alt="Techood Logo" class="side-logo left">
+                    <a href="#">
+                        <img src="./assets/home/pokemonGo.png" alt="Pokémon GO" class="brand-logo">
+                    </a>
+                    <img src="./assets/home/niantic.png" alt="Niantic Logo" class="side-logo right">
+                </div>
 
+                <ul class="media-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Main Menu Links -->
+            <div class="col2">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: GO Fest & Events -->
+            <div class="col3">
+                <ul class="menu">
+                    <li><a href="#">GO Fest</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Seasons</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Pokémon GO Live & More -->
+            <div class="col4">
+                <ul class="menu">
+                    <li><a href="#">Pokémon GO Live</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                    <li><a href="#">Community Day Map</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5: Disclaimer with Social Media Icons Below -->
+            <div class="col5">
+                <p class="disclaimer">
+                    Disclaimer: All images used are the property of Niantic. This project is for educational purposes only, and no copyright infringement is intended.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--END OF FOOTER-->     
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
