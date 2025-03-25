@@ -112,7 +112,7 @@ nav img {
 
 
 .carousel-indicators .active {
-    background-image: url('./assets/home/pokeball_blue.png'); /* Use custom image */
+    background-image: url('./assets/home/pokeball_p.png'); /* Use custom image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,9 +120,9 @@ nav img {
     background-color: transparent !important; /* Ensure no extra background */
     width: 23px !important;  /* Larger size */
     height: 23px !important;
-    position: relative;
-    
+    position: relative;   
 }
+
 
 /*PRODUCTS OR SHOP */
 .card__container {
@@ -305,14 +305,14 @@ nav img {
 }
 
 /*ABOUT PAGE*/
-
 #about {
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding: 50px 10%;
+    text-align: center;
 }
 
-
 #about img {
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -321,7 +321,26 @@ nav img {
 }
 
 #about .text-col {
+    flex: 1;
     padding-left: 50px; /* Adds space between image and text */
+}
+
+#about button {
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(6, 6, 6, 0.5), rgba(0, 74, 173, 0.5));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#about button:hover {
+    color: #e1bf15
 }
 
 /* Default state: Full gradient background, white text */
@@ -332,6 +351,18 @@ nav img {
     font-weight: 500;
     cursor: pointer;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    #about .text-col {
+        padding-left: 0;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    #about button {
+        width: 100%;
+    }
 }
 
 .footer body {
