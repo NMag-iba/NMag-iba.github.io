@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNICAL 4 - MAG-IBA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="restaurant-header">
+    <h1 class="header-title">Dine and Discover</h1>
+    <p class="header-subtitle">by: Nhica Mag-iba</p>
+</header>
+<!-- END OF HEADER -->
+
+<div class="text-center mt-3">
+    <a href="#menu" class="btn view-all-btn">MENU</a>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="container">
+                <div class="card__container">
+
+                   <article class="card__article card-1">
+                       <span class="card__label">Din Tai Fung</span>
+                       <img src="./assets/FOOD1.jpg" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">Authentic Taiwanese food.</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>
+                   
+                   <article class="card__article card-2">
+                       <span class="card__label">Mamou</span>
+                       <img src="./assets/FOOD5.jpg" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">Premium steaks and cozy ambiance.</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>
+                   
+                   <article class="card__article card-3">
+                       <span class="card__label">Capri Club</span>
+                       <img src="./assets/FOOD3.jpg" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">perfect spot for pasta lovers.</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>
+                   
+                   <article class="card__article card-4">
+                       <span class="card__label">Kamayan</span>
+                       <img src="./assets/FOOD4.jpg" alt="image" class="card__img">
+                       <div class="card__data">
+                           <h2 class="card__title">Traditional Filipino dining.</h2>
+                           <a href="#" class="card-btn">View</a>
+                       </div>
+                   </article>  
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
+<!-- END OF PRODUCTS -->
+
+<!-- Details Section (Initially Hidden) -->
+<section id="details" style="display: none;">
+    <div class="details-card">
+        <img id="details-img" src="" alt="Restaurant Image">
+        <div class="details-content">
+            <h2 id="details-title">Restaurant Name</h2>
+            <p id="details-location">Address</p>
+            <p id="details-category">Category</p>
+            <p id="details-price">Price Range</p>
+            <p id="details-desc">Description</p>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -82,14 +82,15 @@ nav img {
     border-radius: 30px;
     width: 100%;
     height: auto;
-    max-height: 750px;
+    max-height: 100vh;
     object-fit: cover;
+    min-height: 300px;
 }
+
 
 .carousel-inner {
     border-radius: 30px; /* Keeps round corners even during transitions */
     overflow: hidden; /* Ensures images don’t exceed the rounded container */
-    min-height: 300px;
 }
 
 .carousel-indicators {
@@ -121,18 +122,6 @@ nav img {
     width: 23px !important;  /* Larger size */
     height: 23px !important;
     position: relative;   
-}
-
-@media (max-width: 768px) {
-    #home {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .carousel-item img {
-        max-height: 50vh; /* Adjust height for mobile */
-        min-height: 200px;
-    }
 }
 
 /*PRODUCTS OR SHOP */
