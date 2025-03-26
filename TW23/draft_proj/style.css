@@ -298,6 +298,8 @@ nav img {
     text-align: center;
     transition: all 0.3s ease-in-out;
     font-size: 0.8rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .view-all-btn:hover {
@@ -317,7 +319,7 @@ nav img {
 }
 
 #about h1 {
-    padding-bottom: 8px;
+    padding-bottom: 40px;
 }
 
 #about .text-col {
@@ -325,32 +327,28 @@ nav img {
     padding-left: 50px; /* Adds space between image and text */
 }
 
-#about button {
-    display: inline-block;
+.btn-store {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     background: linear-gradient(90deg, rgba(6, 6, 6, 0.5), rgba(0, 74, 173, 0.5));
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-
-#about button:hover {
-    color: #e1bf15
-}
-
-/* Default state: Full gradient background, white text */
-#about button {
-    color: white;
+    padding: 10px 15px;
     border-radius: 5px;
-    text-transform: capitalize;
+    text-decoration: none;
     font-weight: 500;
-    cursor: pointer;
-    text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.btn-store i {
+    font-size: 1.5rem;
+}
+
+.btn-store:hover {
+    color: #e1bf15;
 }
 
 @media (max-width: 768px) {
@@ -363,6 +361,30 @@ nav img {
     #about button {
         width: 100%;
     }
+}
+
+.btn-store {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(90deg, rgba(6, 6, 6, 0.5), rgba(0, 74, 173, 0.5));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.btn-store i {
+    font-size: 1.5rem;
+}
+
+.btn-store:hover {
+    color: #e1bf15;
 }
 
 .footer body {
@@ -596,5 +618,45 @@ footer .container {
         text-align: left; /* Aligns text to the left */
         margin-left: 20%; /* Moves the block to the right */
         max-width: 70%; /* Adjust width for better layout */
+    }
+}
+
+#products h1::after,
+#about h1::after {
+    content: "";
+    display: block;
+    width: 150px; /* Adjust width as needed */
+    height: 4px; /* Thickness of the line */
+    margin: 8px auto 0; /* Adjust spacing */
+    background: linear-gradient(90deg, rgba(6, 6, 6, 0.5), rgba(0, 74, 173, 0.5));
+    border-radius: 2px; /* Slight rounding for a smooth look */
+}
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Activate fade-in on scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
