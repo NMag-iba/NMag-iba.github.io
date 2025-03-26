@@ -86,10 +86,10 @@ nav img {
     object-fit: cover;
 }
 
-
 .carousel-inner {
     border-radius: 30px; /* Keeps round corners even during transitions */
     overflow: hidden; /* Ensures images don’t exceed the rounded container */
+    min-height: 300px;
 }
 
 .carousel-indicators {
@@ -123,6 +123,17 @@ nav img {
     position: relative;   
 }
 
+@media (max-width: 768px) {
+    #home {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carousel-item img {
+        max-height: 50vh; /* Adjust height for mobile */
+        min-height: 200px;
+    }
+}
 
 /*PRODUCTS OR SHOP */
 .card__container {
@@ -146,7 +157,7 @@ nav img {
   height: 100%;
   object-fit: cover;
   border-radius: 1.5rem;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
   z-index: 1; /* Keeps it above ::before */
 }
 
@@ -222,15 +233,12 @@ nav img {
   margin-bottom: .75rem;
 }
 
-.card__button:hover {
-  text-decoration: underline;
-}
 
 /* Naming animations in hover */
 .card__article:hover .card__data {
   animation: show-data 0.5s forwards;
   opacity: 1;
-  transition: opacity .3s;
+  transition: opacity .2s;
 }
 
 .card__article:not(:hover) .card__data {
