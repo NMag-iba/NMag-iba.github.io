@@ -76,6 +76,16 @@ nav img {
     border-top: 1px solid #e9ecef;
 }
 
+@media (max-width: 760px) {
+    body {
+        align-items: center;
+    }
+
+    nav img {
+        margin-left: 15px;
+    }
+}
+
 /*HOME / HERO*/
 #home {
     padding-top: 140px;
