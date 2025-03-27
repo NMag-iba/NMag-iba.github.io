@@ -2,23 +2,22 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh; /* Full screen by default */
-    overflow: hidden; /* Prevents scrolling */
+    height: 100vh; 
+    overflow: hidden; 
     background-image: url('./assets/BG_F2.png');
     background-size: cover;
-    background-attachment: fixed; /* Keeps background in place */
+    background-attachment: fixed; 
 }
 
-/* Enable scrolling when the screen is smaller (minimized or resized) */
 @media screen and (max-width: 1024px) {
     html, body {
-        height: auto; /* Allows content to grow */
-        overflow: auto; /* Enables scrolling */
+        height: auto; 
+        overflow: auto; 
     }
 }
 
 img {
-    display: block; /* Removes extra spacing below images */
+    display: block; 
 }
 
 .restaurant-header {
@@ -27,8 +26,8 @@ img {
     color: black;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    width: 40%; /* Adjust width */
-    margin: 2rem auto; /* Center horizontally */
+    width: 40%;
+    margin: 2rem auto; 
     padding-bottom: 5px;
 }
 
@@ -43,7 +42,7 @@ img {
     border-radius: 8px;
     text-decoration: none;
     cursor: pointer;
-    background: linear-gradient(90deg, #A0C4E2, #72A0C1, #4A769E); /* Gradient with light & dark variations */
+    background: linear-gradient(90deg, #A0C4E2, #72A0C1, #4A769E);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: -1rem;
@@ -51,7 +50,7 @@ img {
 }
 
 .view-all-btn:hover {
-    background: linear-gradient(90deg, #4A769E, #72A0C1, #A0C4E2); /* Reverse gradient on hover */
+    background: linear-gradient(90deg, #4A769E, #72A0C1, #A0C4E2); 
 }
 
 .header-title {
@@ -70,8 +69,8 @@ img {
 
 .card__container {
     display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    justify-content: center; /* Aligns items in the center */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 3.5rem;
     margin-top: -2rem;
     margin-bottom: 50px;
@@ -79,23 +78,23 @@ img {
 
 .card__label {
     position: absolute;
-    top: 15px; /* Adjusts distance from the top */
+    top: 15px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.75); 
     color: black;
     font-size: 1rem;
     font-weight: bold;
     padding: 6px 14px;
     border-radius: 8px;
-    z-index: 2; /* Ensures it is above the image */
+    z-index: 2;
     text-align: center;
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card__article {
-    position: relative; /* Ensures absolute positioning works inside */
+    position: relative;
     overflow: hidden;
     width: 300px;
     height: 400px;
@@ -105,7 +104,7 @@ img {
 }
 
 .card__article:hover {
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4); /* Enhances effect on hover */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4); 
 }
   
 
@@ -118,7 +117,7 @@ img {
 }
 
 .card__article:hover .card__img {
-    transform: scale(1.1); /* Increases size by 10% */
+    transform: scale(1.1); 
 }
 
 .card__data {
@@ -137,9 +136,9 @@ img {
     transition: opacity 1s 1s;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Ensures text is centered */
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
 }
 .card__description {
     display: block;
@@ -156,7 +155,7 @@ img {
 
 .card-btn {
     display: inline-block;
-    background: linear-gradient(90deg, #A0C4E2, #72A0C1, #4A769E); /* Same gradient */
+    background: linear-gradient(90deg, #A0C4E2, #72A0C1, #4A769E); 
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: white;
@@ -174,12 +173,10 @@ img {
     font-size: 0.8rem;
 }
 
-/* Hover Effect - Reverse Gradient */
 .card-btn:hover {
     background: linear-gradient(90deg, #4A769E, #72A0C1, #A0C4E2);
 }
 
-/* Naming animations in hover */
 .card__article:hover .card__data {
     animation: show-data 0.5s forwards;
     opacity: 1;
@@ -190,7 +187,6 @@ img {
     animation: remove-data 0.5s forwards;  
 }
 
-/* Card animation */
 @keyframes show-data {
 100% {
     transform: translateY(-7rem);
@@ -208,8 +204,6 @@ img {
     }
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
 @media screen and (max-width: 340px) {
 .container {
     margin-inline: 1rem;
@@ -221,7 +215,6 @@ img {
 }
 }
 
-/* For medium devices */
 @media screen and (min-width: 768px) {
 .card__container {
     grid-template-columns: repeat(2, 1fr);
@@ -229,7 +222,6 @@ img {
 }
 }
 
-/* For large devices */
 @media screen and (min-width: 1120px) {
 .container {
     height: 100vh;
