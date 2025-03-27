@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (restaurantData[restaurantName]) {
                 detailsImg.src = restaurantData[restaurantName].img;
                 detailsTitle.innerText = restaurantName;
-                detailsLocation.innerText = "📍 " + restaurantData[restaurantName].location;
+                detailsLocation.innerText = "📌 " + restaurantData[restaurantName].location;
                 detailsCategory.innerText = "🍽️ " + restaurantData[restaurantName].category;
                 detailsPrice.innerText = "💲 " + restaurantData[restaurantName].price;
                 detailsDesc.innerText = restaurantData[restaurantName].desc;

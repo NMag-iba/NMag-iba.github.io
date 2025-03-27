@@ -1,13 +1,20 @@
-body {
-    background-image: url('./assets/BG_F2.png'); /* Ensure the image path is correct */
-    background-size: cover; /* Ensures the image covers the whole page */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    min-height: 100vh; /* Allows the page to extend if content overflows */
-    width: 100vw; /* Ensures the body takes the full viewport width */
-    margin: 0; /* Removes any default margin */
-    padding: 0; /* Removes any default padding */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh; /* Full screen by default */
+    overflow: hidden; /* Prevents scrolling */
+    background-image: url('./assets/BG_F2.png');
+    background-size: cover;
+    background-attachment: fixed; /* Keeps background in place */
+}
+
+/* Enable scrolling when the screen is smaller (minimized or resized) */
+@media screen and (max-width: 1024px) {
+    html, body {
+        height: auto; /* Allows content to grow */
+        overflow: auto; /* Enables scrolling */
+    }
 }
 
 img {
@@ -67,6 +74,7 @@ img {
     justify-content: center; /* Aligns items in the center */
     gap: 3.5rem;
     margin-top: -2rem;
+    margin-bottom: 50px;
 }
 
 .card__label {
@@ -106,8 +114,11 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 1.5rem;
-    transition: opacity 0.4s ease-in-out;
-    z-index: 1; /* Keeps it above ::before */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card__article:hover .card__img {
+    transform: scale(1.1); /* Increases size by 10% */
 }
 
 .card__data {
