@@ -252,6 +252,9 @@ nav img {
 }
 
 /*PRODUCTS OR SHOP */
+#products h1{
+    color: #003366
+}
 .card__container {
     display: flex;
     flex-wrap: wrap; /* Ensures responsiveness */
@@ -519,6 +522,7 @@ nav img {
 #about h1 {
     padding-top: 30px;
     padding-bottom: 45px;
+    color: #003366
 }
 
 #about .text-col {
@@ -613,6 +617,7 @@ nav img {
     color: #e1bf15;
 }
 
+/*FOOTER*/
 .footer .container {
     margin-top: -0.9em;
 }
