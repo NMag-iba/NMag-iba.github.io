@@ -608,3 +608,32 @@ footer .container {
     margin: 10px auto 20px; /* Increase last value for more space */
 
 }
+
+/* Pop-up Notification */
+.review-popup {
+    position: fixed;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #003366;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    z-index: 1000;
+}
+
+.review-popup.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.review-popup i {
+    font-size: 1.5rem;
+}
