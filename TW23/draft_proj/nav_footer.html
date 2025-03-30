@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="transact-style.css">
+    <link rel="stylesheet" href="nav_footer.css">
 </head>
 <body>
 
@@ -28,36 +28,30 @@
         <div class="navbar-collapse collapse" id="nav3">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Shop</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">All products</a></li>
-                      <li><a class="dropdown-item" href="#">Item Boxes</a></li>
-                      <li><a class="dropdown-item" href="#">PokéCoins</a></li>
-                      <li><a class="dropdown-item" href="#">Daily Bundles</a></li>
-                    </ul>
+                    <a class="nav-link" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
+                    <a class="nav-link" href="shop.html">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="cart.html">Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://nianticlabs.com/terms?fbclid=IwZXh0bgNhZW0CMTEAAR1JdofnX3ztzHR5348hkGDCw7dF10MFk-__AX3MiEmQHZelrMgLhmQiXIg_aem_9Ac8iTAmQGycOQWd9Dojpg">Contact Us</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#" id="viewProfile"><i class="fas fa-user-circle"></i> View Profile</a></li>
+                        <li><a class="dropdown-item" href="profile.html" id="viewProfile"><i class="fas fa-user-circle"></i> View Profile</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings & Privacy</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        <li><a class="dropdown-item" href="login.html" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -65,37 +59,7 @@
     </div>
 </nav>
 <!-- END NAVBAR -->
-
-<!-- TRANSACTION -->
-<section id="transaction">
-    <div class="container">
-        <h1 class="text-center mb-2">TRANSACTION HISTORY</h1>
-        <div class="row align-items-center">
-            <!-- First Card -->
-            <div class="details-card">
-                <img src="./assets/transact/order1.png" alt="Restaurant Image">
-                <div class="details-content">
-                    <h2 id="details-title">Ultra Raid Box</h2>
-                    <p class="details-amount">Amount: 1</p>
-                    <p id="details-price">₱149.00</p>
-                    <p id="details-date">01/02/2025</p>
-                </div>
-            </div>
-
-            <!-- Second Card -->
-            <div class="details-card">
-                <img src="./assets/transact/order2.png" alt="Restaurant Image">
-                <div class="details-content">
-                    <h2 id="details-title">Might and Mastery Box</h2>
-                    <p class="details-amount">Amount: 2</p>
-                    <p id="details-price">₱149.00</p>
-                    <p id="details-date">01/02/2025</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END OF TRANSACTION -->
+ 
 
 <!--FOOTER-->
 <footer class="footer">
@@ -122,29 +86,29 @@
             <!-- Column 2: Main Menu Links -->
             <div class="col2">
                 <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="profile.html">Profile</a></li>
                 </ul>
             </div>
 
             <!-- Column 3: GO Fest & Events -->
             <div class="col3">
                 <ul class="menu">
-                    <li><a href="#">GO Fest</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Seasons</a></li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="https://pokemongolive.com/post/go-fest-2025-events-announcement">GO Fest</a></li>
+                    <li><a href="https://pokemongolive.com/news?hl=en">News</a></li>
+                    <li><a href="https://pokemongolive.com/seasons/might-and-mastery?hl=en">Seasons</a></li>
+                    <li><a href="https://pokemongolive.com/events?hl=en">Events</a></li>
                 </ul>
             </div>
 
             <!-- Column 4: Pokémon GO Live & More -->
             <div class="col4">
                 <ul class="menu">
-                    <li><a href="#">Pokémon GO Live</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <li><a href="#">Community Day Map</a></li>
+                    <li><a href="https://pokemongolive.com/">Pokémon GO Live</a></li>
+                    <li><a href="https://pokemongolive.com/leaderboard?hl=en">Leaderboard</a></li>
+                    <li><a href="https://pokemongolive.com/community-day/map?hl=en">Community Day Map</a></li>
                 </ul>
             </div>
 
@@ -163,5 +127,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
